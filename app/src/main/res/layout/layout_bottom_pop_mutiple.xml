@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/iv_dark"
+        android:background="#000000"
+        android:alpha="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <com.example.calendarwidget.widget.FullScreenView
+        android:layout_width="match_parent"
+        android:background="@drawable/function_pop_bg"
+        android:layout_height="wrap_content"
+        app:MaxHeight="360dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+                <TextView
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/color_999"
+                    android:text="取消"
+                    android:layout_marginLeft="16dp"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="确认"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+
+
+                <TextView
+                    android:id="@+id/tv_pop_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:maxLength="16"
+                    android:layout_centerInParent="true"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/color_222222"
+                    android:text="大股东给对方鬼地方个电饭锅电饭锅"/>
+
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pop_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+        </LinearLayout>
+    </com.example.calendarwidget.widget.FullScreenView>
+
+</LinearLayout>
